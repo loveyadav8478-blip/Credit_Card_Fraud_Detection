@@ -387,19 +387,12 @@ except Exception:
 # HEADER
 # ============================================================
 
-st.markdown("""
+st.html("""
 <div class="header">
-
-    <div class="header-title">
-        💳 SecurePay
-    </div>
-
-    <div class="header-subtitle">
-        Credit Card Transaction Security
-    </div>
-
+    <div class="header-title">💳 SecurePay</div>
+    <div class="header-subtitle">Credit Card Transaction Security</div>
 </div>
-""", unsafe_allow_html=True)
+""")
 
 
 # ============================================================
@@ -416,20 +409,15 @@ st.info(
 # TRANSACTION INFORMATION
 # ============================================================
 
-st.markdown("""
+st.html("""
 <div class="section">
-
-    <div class="section-title">
-        Transaction Information
-    </div>
-
+    <div class="section-title">Transaction Information</div>
     <div class="section-description">
         Provide the location and purchase information associated
         with this transaction.
     </div>
-
 </div>
-""", unsafe_allow_html=True)
+""")
 
 
 # ============================================================
@@ -499,19 +487,14 @@ with col4:
 # TRANSACTION METHOD
 # ============================================================
 
-st.markdown("""
+st.html("""
 <div class="section">
-
-    <div class="section-title">
-        Transaction Method
-    </div>
-
+    <div class="section-title">Transaction Method</div>
     <div class="section-description">
         Select how this transaction was processed.
     </div>
-
 </div>
-""", unsafe_allow_html=True)
+""")
 
 
 col5, col6, col7 = st.columns(3)
@@ -640,25 +623,16 @@ if check_transaction:
         # FRAUD RESULT
         # ----------------------------------------------------
 
-        st.markdown(
+        st.html(
             f"""
 <div class="result-box">
-
-    <div class="result-title">
-        🚨 Potential Fraud Detected
-    </div>
-
-    <div class="result-probability">
-        {probability_percentage:.2f}%
-    </div>
-
+    <div class="result-title">🚨 Potential Fraud Detected</div>
+    <div class="result-probability">{probability_percentage:.2f}%</div>
     <div class="result-description">
         Estimated probability of fraudulent activity
     </div>
-
 </div>
-""",
-            unsafe_allow_html=True
+"""
         )
 
         st.error(
@@ -673,25 +647,16 @@ if check_transaction:
         # NORMAL RESULT
         # ----------------------------------------------------
 
-        st.markdown(
+        st.html(
             f"""
 <div class="result-box">
-
-    <div class="result-title">
-        ✅ Transaction Appears Normal
-    </div>
-
-    <div class="result-probability">
-        {probability_percentage:.2f}%
-    </div>
-
+    <div class="result-title">✅ Transaction Appears Normal</div>
+    <div class="result-probability">{probability_percentage:.2f}%</div>
     <div class="result-description">
         Estimated probability of fraudulent activity
     </div>
-
 </div>
-""",
-            unsafe_allow_html=True
+"""
         )
 
         st.success(
@@ -704,10 +669,7 @@ if check_transaction:
     # RISK ASSESSMENT
     # ========================================================
 
-    st.markdown(
-        '<div class="risk-title">Risk Assessment</div>',
-        unsafe_allow_html=True
-    )
+    st.html('<div class="risk-title">Risk Assessment</div>')
 
 
     st.progress(
@@ -736,15 +698,11 @@ if check_transaction:
 # FOOTER
 # ============================================================
 
-st.markdown("""
+st.html("""
 <div class="footer">
-
     SecurePay · Credit Card Transaction Security
-
     <br><br>
-
     Risk assessment is intended to support transaction review
     and should not be treated as a definitive determination of fraud.
-
 </div>
-""", unsafe_allow_html=True)
+""")
